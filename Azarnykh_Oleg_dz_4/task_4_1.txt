@@ -1,0 +1,61 @@
+                Проверить, установлен ли пакет pillow в глобальном окружении. Если да — зафиксировать версию.
+
+Microsoft Windows [Version 6.1.7601]
+(c) Корпорация Майкрософт (Microsoft Corp.), 2009. Все права защищены.
+
+C:\Users\Family>pip freeze
+certifi==2021.10.8
+charset-normalizer==2.0.10
+Django==2.2
+idna==3.3
+Pillow==9.0.0
+pytz==2021.3
+sqlparse==0.4.2
+urllib3==1.26.8
+
+C:\Users\Family>pip show pillow
+Name: Pillow
+Version: 9.0.0
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: c:\users\family\appdata\local\programs\python\python37\lib\site-packag
+es
+Requires:
+Required-by:
+
+
+                Создать и активировать виртуальное окружение. Убедиться, что в нем нет пакета pillow.
+
+
+C:\Users\Family\Desktop>python -m venv virt
+
+C:\Users\Family\Desktop>"virt/Scripts/activate.bat"
+
+(virt) C:\Users\Family\Desktop>pip freeze
+
+(virt) C:\Users\Family\Desktop>pip show pillow
+
+(virt) C:\Users\Family\Desktop>
+
+                Установить в виртуальное окружение pillow версии 7.1.1 (или другой, отличной от самой свежей).
+
+
+(virt) C:\Users\Family\Desktop>pip install pillow==7.1.1
+Collecting pillow==7.1.1
+  Using cached https://files.pythonhosted.org/packages/44/9c/04297251a6e38b8506a
+4fcee17a1f16765a12ab8d805f9fd9e0fda424fec/Pillow-7.1.1-cp37-cp37m-win_amd64.whl
+Installing collected packages: pillow
+Successfully installed pillow-7.1.1
+You are using pip version 19.0.3, however version 21.3.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' comm
+and.
+
+(virt) C:\Users\Family\Desktop>
+
+                Деактивировать виртуальное окружение.
+
+(virt) C:\Users\Family\Desktop>deactivate
+C:\Users\Family\Desktop>
